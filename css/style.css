@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* BACKGROUND IMAGE */
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: url("../assets/college.png") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+}
+
+/* dark overlay */
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 0;
+}
+
+/* content above overlay */
+.role-wrapper,
+.login-wrapper {
+  position: relative;
+  z-index: 1;
+}
+/* CENTER CARD */
+.role-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* GLASS CARD */
+.role-card {
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 18px;
+  text-align: center;
+  color: #fff;
+  width: 360px;
+  animation: fadeUp 0.8s ease;
+}
+
+.role-card h1 {
+  margin-bottom: 8px;
+}
+
+.role-card p {
+  margin-bottom: 25px;
+  opacity: 0.85;
+}
+
+/* BUTTONS */
+.role-card button {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  font-size: 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.role-card button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
